@@ -45,6 +45,8 @@
   },
   "devDependencies": {
     "@iconify/react": "^3.2.2",
-    "eslint": "^8.23.0"
+    "eslint": "^8.23.0",
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1"
   }
 }
