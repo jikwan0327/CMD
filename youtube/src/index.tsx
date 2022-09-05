@@ -1,20 +1,14 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
-body {
-  margin: 0;
-  background-color: #F9F9F9;
-}
-`;
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme";
 
 ReactDOM.render(
   <StrictMode>
-    <GlobalStyle />
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </StrictMode>,
   document.getElementById("root")
 );

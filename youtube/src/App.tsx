@@ -1,14 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./pages/Main";
+import { createGlobalStyle } from "styled-components";
+import Router from "./router";
+
+const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+body {
+  margin: 0;
+  background-color: #F9F9F9;
+}
+`;
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main></Main>}></Route>
-        <Route path="/mypage" element={<></>}></Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <GlobalStyle />
+      <Router></Router>
+    </>
   );
 }
 
