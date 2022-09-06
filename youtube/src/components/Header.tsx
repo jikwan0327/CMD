@@ -42,6 +42,7 @@ const Container = styled.div`
   width: 100vw;
   height: 56px;
   border-bottom: 1px solid #e5e5e5;
+  z-index: 99;
 `;
 
 const Wrapper = styled.div`
@@ -54,7 +55,7 @@ const Search = styled.input`
   height: 37px;
   outline: 0;
   border: 0;
-  border: 1px solid #cccccc;
+  border: 1px solid ${(props) => props.theme.gray.dark};
   padding-left: 8px;
   font-size: 16px;
   font-weight: 350;
@@ -66,17 +67,17 @@ const SearchBtn = styled.button`
   cursor: pointer;
   border: 0;
   outline: 0;
-  border-bottom: 1px solid #c6c6c6;
-  border-top: 1px solid #c6c6c6;
-  border-right: 1px solid #c6c6c6;
-  background-color: #f9f9f9;
+  border-bottom: 1px solid ${(props) => props.theme.gray.border};
+  border-top: 1px solid ${(props) => props.theme.gray.border};
+  border-right: 1px solid ${(props) => props.theme.gray.border};
+  background-color: ${(props) => props.theme.gray.light};
 `;
 
 const Mic = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f9f9f9;
+  background-color: ${(props) => props.theme.gray.light};
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -96,8 +97,8 @@ const Login = styled.div`
   cursor: pointer;
   width: 94px;
   height: 36px;
-  border: 1px solid #065fd4;
-  color: #065fd4;
+  border: 1px solid ${(props) => props.theme.blue.login};
+  color: ${(props) => props.theme.blue.login};
   margin-right: 30px;
   margin-left: 15px;
 `;

@@ -7,6 +7,10 @@ body {
   margin: 0;
   background-color: #F9F9F9;
 }
+a {
+  text-decoration:none;
+  color:inherit;
+}
 `;
 
 function App() {
